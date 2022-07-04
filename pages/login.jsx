@@ -3,7 +3,7 @@ import { LoginScreen } from '../components/login/screen';
 export default function Login() {
   return (
     <div className="mx-auto max-w-sm h-screen relative">
-      <div className="absolute top-0 px-1 w-11/12 h-4/5 pr-4 pb-24 pt-12 bg-black rounded-br-2xl z-10">
+      <div className="absolute top-0 px-1 w-11/12 pr-4 pb-24 pt-12 bg-black rounded-br-xl z-10">
         <LoginScreen />
       </div>
       <div>
