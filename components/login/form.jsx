@@ -1,48 +1,16 @@
-import axios from 'axios';
-import { useEffect } from 'react';
 import { Field, Form, Formik } from 'formik';
 import { login, search } from '../../helpers/axios-api-client';
 
 export const LoginForm = () => {
   const handleLogin = async (email, password) => {
-    /*  await login(email, password);
-    axios
-      .post('https://nox-podcast-api.vercel.app/login', { email: 'test@example.com', password: '123456' })
-      .then((data) => console.log(data))
-      .catch(console.log('nonono')); */
-
+    await login(email, password);
+  };
+  const handlesearch = async () => {
     await search({ text: 'v' });
   };
 
-  /* axios
-    .post('https://nox-podcast-api.vercel.app/login', { email: 'test@example.com', password: '123456' })
-    .then((data) => console.log(data.data))
-    .catch(console.log('nonono')); */
-
   return (
     <div>
-      <button
-        className="bg-white"
-        onClick={() => {
-          axios
-            .get('https://nox-podcast-api.vercel.app/search?text=v')
-            .then((data) => console.log(data))
-            .catch(console.log('nonono'));
-        }}
-      >
-        search
-      </button>
-      <button
-        className="bg-white mx-2"
-        onClick={() => {
-          axios
-            .post('https://nox-podcast-api.vercel.app/login', { email: 'test@example.com', password: '123456' })
-            .then((data) => console.log(data.data))
-            .catch(console.log('nonono'));
-        }}
-      >
-        Login
-      </button>
       <Formik
         initialValues={{
           email: '',
