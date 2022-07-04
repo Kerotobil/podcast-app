@@ -14,10 +14,10 @@ export const LoginForm = () => {
     await search({ text: 'v' });
   };
 
-  axios
+  /* axios
     .post('https://nox-podcast-api.vercel.app/login', { email: 'test@example.com', password: '123456' })
     .then((data) => console.log(data.data))
-    .catch(console.log('nonono'));
+    .catch(console.log('nonono')); */
 
   return (
     <div>
@@ -57,7 +57,7 @@ export const LoginForm = () => {
           return (
             <Form>
               <div className="w-5/6 space-y-4 mx-auto mt-20">
-                <div class="flex items-center text-lg mb-6 md:mb-8 bg-transparent border border-gray-800 rounded-lg rounded-br-none">
+                <div className="flex items-center text-lg mb-6 md:mb-8 bg-transparent border border-gray-800 rounded-lg rounded-br-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6 ml-2 text-white"
@@ -80,7 +80,7 @@ export const LoginForm = () => {
                     placeholder="E-mail address"
                   />
                 </div>
-                <div class="flex items-center text-lg mb-6 md:mb-8 bg-transparent border border-gray-800 rounded-lg rounded-br-none">
+                <div className="flex items-center text-lg mb-6 md:mb-8 bg-transparent border border-gray-800 rounded-lg rounded-br-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6 ml-2 text-white"
