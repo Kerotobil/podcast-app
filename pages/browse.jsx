@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
 import { BrowseScreen } from '../components/browse/screen';
-import { search } from '../helpers/axios-api-client';
 
 export default function Browse() {
   return (

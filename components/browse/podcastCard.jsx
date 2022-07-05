@@ -1,5 +1,3 @@
-import finalPropsSelectorFactory from 'react-redux/es/connect/selectorFactory';
-
 export const PodcastCard = (props) => {
   return (
     <div className="h-48 w-full py-4 px-4 flex flex-col justify-between bg-gray-800 mx-auto rounded-xl rounded-br-none">
