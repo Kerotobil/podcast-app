@@ -33,7 +33,7 @@ export const LoginForm = () => {
         {(formik) => {
           return (
             <Form>
-              <div className="w-5/6 space-y-4 mx-auto mt-20">
+              <div className="space-y-4 mx-auto mt-20">
                 <div className="flex items-center text-lg mb-6 md:mb-8 bg-transparent border border-gray-800 rounded-lg rounded-br-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
