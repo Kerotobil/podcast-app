@@ -26,7 +26,6 @@ export const LoginForm = () => {
           password: '',
         }}
         onSubmit={(values) => {
-          console.table(values);
           handleLogin(values.email, values.password);
         }}
       >
