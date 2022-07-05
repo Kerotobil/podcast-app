@@ -1,12 +1,21 @@
 import { Field, Form, Formik } from 'formik';
-import { login, search } from '../../helpers/axios-api-client';
+import { useRouter } from 'next/router';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../../helpers/axios-api-client';
+import { addToken } from '../../store/action/addToken';
 
 export const LoginForm = () => {
+  const router = useRouter();
+  const dispatch = useDispatch();
+  const { token } = useSelector((state) => state.auth);
+
   const handleLogin = async (email, password) => {
-    await login(email, password);
-  };
-  const handlesearch = async () => {
-    await search({ text: 'v' });
+    if (token != '') return;
+    const { access_token } = await login(email, password);
+    if (!!access_token) {
+      dispatch(addToken({ type: 'ADD', payload: access_token }));
+      router.push('/browse');
+    }
   };
 
   return (
